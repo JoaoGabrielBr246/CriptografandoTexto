@@ -16,23 +16,29 @@
         <div class="container">
             <div class="content">
                 <section class="insert-text">
-                    <textarea placeholder="Digite seu texto" class="insert-text__text"
-                    cols="50" rows="10" wrap="hard"></textarea>
+                    <textarea placeholder="Digite seu texto" class="insert-text__text" cols="50" rows="10"
+                        wrap="hard"></textarea>
                 </section>
                 <div class="bottom-section">
-                    <h4 class="insert-text__alert">Apenas letras minúsculas e sem acento.</h4>
+                    <div class="bottom-section__alert">
+                        <img src="assets/alert-icon.png" class="bottom-section__img">
+                        <h4 class="insert-text__alert">Apenas letras minúsculas e sem acento.</h4>
+                    </div>
                     <div class="buttons">
                         <button class="buttons__button1">Criptografar</button>
                         <button class="buttons__button2">Descriptografar</button>
                     </div>
                 </div>
             </div>
-            <img src="assets/nomessage.svg" class="insert-text__show-text">
+            <section class="rectangle">
+                <img src="assets/nomessage.svg" class="rectangle__img">
+                <h1 class="rectangle__h1">Nenhuma mensagem encontrada</h1>
+                <p class="rectangle__p">Digite um texto que você deseja criptografar ou descriptografar</p>
+            </section>
+
         </div>
     </main>
     <footer></footer>
 </body>
-
-
 
 </html>

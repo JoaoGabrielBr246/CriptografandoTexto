@@ -1,11 +1,12 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 body {
   background-color: #f3f5fc;
+  box-sizing: border-box;
+  padding: 0 2% 2% 0;
 }
 
 .head {
@@ -24,8 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 0 15%;
-  max-height: 100vh;
+  margin: 0 0 0 15%;
 }
 
 .container {
@@ -36,6 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-right: 80px;
 }
 
 .insert-text {
@@ -60,7 +61,7 @@ body {
 
 .insert-text__text::placeholder {
   color: #0a3871;
-  font-size: 32px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -70,24 +71,71 @@ body {
   margin-top: 20px;
 }
 
+.bottom-section__alert {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+
+.bottom-section__img {
+  margin-right: 8px;
+}
+
 .insert-text__alert {
   font-size: 12px;
+  color: #495057;
+  opacity: 0.8;
 }
 
 .buttons {
   display: flex;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .buttons__button1 {
-  width: 50%;
-  border: 1px solid green;
+  width: 328px;
+  border-radius: 24px;
+  background-color: #0a3871;
+  color: white;
+  font-size: 16px;
   padding: 24px;
+  border: none;
 }
 
 .buttons__button2 {
-  width: 50%;
-  margin-left: 24px;
-  border: 1px solid green;
+  width: 328px;
+  border-radius: 24px;
+  border: 1px solid #0a3871;
+  color: #0a3871;
+  background-color: #d8dfe8;
+  font-size: 16px;
   padding: 24px;
+}
+
+.rectangle {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;   
+    background-color: white;
+    border-radius: 32px;
+    margin-left: auto;
+
+    }
+
+.rectangle__img {
+  width: auto;
+  height: 200px;
+  padding-bottom: 5px;
+}
+
+.rectangle__h1{
+    text-align: center;
+}
+
+.rectangle__p{
+    text-align: center;
 }
