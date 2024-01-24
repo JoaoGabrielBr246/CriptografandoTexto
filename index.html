@@ -4,43 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WriteAgain</title>
+    <title>EncryptorT6</title>
     <link rel="stylesheet" href="styles/estilo.css">
 </head>
 
 <body>
-    <header class="head">
-        <img class="head__icon" src="assets/Logo.svg">
+    <header class="nav">
+        <img src="assets/Logo.svg" class="nav__img">
     </header>
     <main class="program">
-        <div class="container">
-            <div class="content">
-                <section class="insert-text">
-                    <textarea placeholder="Digite seu texto" class="insert-text__text" cols="50" rows="10"
-                        wrap="hard"></textarea>
-                </section>
-                <div class="bottom-section">
-                    <div class="bottom-section__alert">
-                        <img src="assets/alert-icon.png" class="bottom-section__img">
-                        <h4 class="insert-text__alert">Apenas letras minúsculas e sem acento.</h4>
-                    </div>
-                    <div class="buttons">
-                        <button class="buttons__button1" onclick="crip()">Criptografar</button>
-                        <button class="buttons__button2" onclick="descrip()">Descriptografar</button>
-                    </div>
-                </div>
+        <section class="program__page">
+            <textarea cols="50" rows="10" wrap="hard" placeholder="Digite seu texto"
+                class="program__textArea"></textarea>
+            <p class="program__p"><img src="assets/alert-icon.png" class="program__alert-icon">Apenas letras minúsculas
+                e sem acento</p>
+            <div class="program__buttons">
+                <button class="buttons__button1" onclick="crip()">Criptografar</button>
+                <button class="buttons__button2" onclick="descrip()">Descriptografar</button>
             </div>
-            <section class="rectangle">
-                <img src="assets/nomessage.svg" class="rectangle__img">
-                <h1 class="rectangle__h1">Nenhuma mensagem encontrada</h1>
-                <p class="rectangle__p">Digite um texto que você deseja criptografar ou descriptografar</p>
-                <button class="rectangle__btn" hidden id="copy-btn" onclick="copyText()">Copiar</button>
-            </section>
 
+        </section>
+        <div class="program__rec"><img src="assets/nomessage.svg" class="program__img">
+            <h1 class="program__rec__h1">Nenhuma mensagem encontrada</h1>
+            <p class="program__rec__p">Digite um texto que você deseja criptografar ou descriptografar</p>
+            <p class="program__rec__pHidden" hidden>HelloFriend</p>
+            <button class="program__rec__btn" hidden id="copy-btn" onclick="copyText()">Copiar</button>
         </div>
     </main>
-    <footer class="rodape">
-        <h1 class="rodape__text">Desenvolvido por João Gabriel - Projeto ONE T6</h1>
+    <footer class="end">
+        <h1 class="end__text">Desenvolvido por João Gabriel - Projeto ONE T6</h1>
+        <div class="end__links">
+            <a class="end__links__link" href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-lima-da-rocha-05a980225/"
+                target="_blank">
+                <img src="assets/linkedin-icon2.png">Meu LinkedIn
+            </a>
+
+            <a class="end__links__link" href="https://github.com/JoaoGabrielBr246" target="_blank">
+                <img src="assets/git-icon.png">Meu Github
+            </a>
+
+            <a class="end__links__link" href="https://www.instagram.com/joaogabb.jar/" target="_blank">
+                <img src="assets/icon-insta2.png">Meu Instagram
+            </a>
+        </div>
     </footer>
 
     <script src="scripts/script.js"></script>

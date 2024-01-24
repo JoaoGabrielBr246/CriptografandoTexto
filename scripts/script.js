@@ -1,12 +1,11 @@
 function crip() {
-    let text = document.querySelector("textarea").value;
-    
-    // Verifica se o texto contém apenas letras minúsculas e sem acentos
-    if (!/^[a-z]+$/.test(text)) {
-      alert("Por favor, digite apenas letras minúsculas e sem acentos.");
+    let text = document.querySelector(".program__textArea").value;
+  
+    if (!/^[a-z\s.,!?]+$/i.test(text)) {
+      alert("Por favor, digite apenas letras minúsculas, espaços e pontuações (.,!?)");
       return;
     }
-    
+  
     text = text.replace(/e/g, "enter");
     text = text.replace(/i/g, "imes");
     text = text.replace(/a/g, "ai");
@@ -17,18 +16,18 @@ function crip() {
       return letra;
     });
 
-    exibirResultado();
-}
   
-function descrip() {
-    let text = document.querySelector("textarea").value;
-
-    // Verifica se o texto contém apenas letras minúsculas e sem acentos
-    if (!/^[a-z]+$/.test(text)) {
-      alert("Por favor, digite apenas letras minúsculas e sem acentos.");
+    exibirResultado();
+  }
+  
+  function descrip() {
+    let text = document.querySelector(".program__textArea").value;
+  
+    if (!/^[a-z\s.,!?]+$/i.test(text)) {
+      alert("Por favor, digite apenas letras minúsculas, espaços e pontuações (.,!?)");
       return;
     }
-
+  
     text = text.replace(/enter/g, "e");
     text = text.replace(/imes/g, "i");
     text = text.replace(/ai/g, "a");
@@ -38,32 +37,35 @@ function descrip() {
     listaFrase = text.split("").map((letra) => {
       return letra;
     });
-
+  
     exibirResultado();
-}
+  }
   
   function exibirResultado() {
-    let image = document.querySelector(".rectangle__img");
-    let h1 = document.querySelector(".rectangle__h1");
-    let p = document.querySelector(".rectangle__p");
-    let rectangle = document.querySelector(".rectangle");
+    let image = document.querySelector(".program__img");
+    let h1 = document.querySelector(".program__rec__h1");
+    let p = document.querySelector(".program__rec__p");
+    let btn = document.querySelector(".program__rec__btn");
+    let hiddenText = document.querySelector(".program__rec__pHidden");
   
     if (listaFrase.length === 0) {
       image.src = "assets/nomessage.svg";
       h1.textContent = "Nenhuma mensagem encontrada";
+      hiddenText.textContent = ""
       p.textContent = "Digite um texto que você deseja criptografar ou descriptografar";
+      btn.setAttribute('hidden', true);
     } else {
       image.src = ""; 
-      p.textContent = listaFrase.join(""); 
+      hiddenText.textContent = listaFrase.join(""); 
+      p.textContent = ""
       h1.textContent = "";
-
-      document.getElementById('copy-btn').removeAttribute('hidden');
-
+      btn.removeAttribute('hidden');
+      hiddenText.removeAttribute('hidden');
     }
   }
-
+  
   function copyText() {
-    let textToCopy = document.querySelector(".rectangle__p").textContent;
+    let textToCopy = document.querySelector(".program__rec__pHidden").textContent;
   
     if (textToCopy) {
       navigator.clipboard.writeText(textToCopy)
@@ -75,3 +77,4 @@ function descrip() {
         });
     }
   }
+  
