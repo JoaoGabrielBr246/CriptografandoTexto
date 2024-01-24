@@ -25,8 +25,8 @@
                         <h4 class="insert-text__alert">Apenas letras minúsculas e sem acento.</h4>
                     </div>
                     <div class="buttons">
-                        <button class="buttons__button1">Criptografar</button>
-                        <button class="buttons__button2">Descriptografar</button>
+                        <button class="buttons__button1" onclick="crip()">Criptografar</button>
+                        <button class="buttons__button2" onclick="descrip()">Descriptografar</button>
                     </div>
                 </div>
             </div>
@@ -34,11 +34,16 @@
                 <img src="assets/nomessage.svg" class="rectangle__img">
                 <h1 class="rectangle__h1">Nenhuma mensagem encontrada</h1>
                 <p class="rectangle__p">Digite um texto que você deseja criptografar ou descriptografar</p>
+                <button class="rectangle__btn" hidden id="copy-btn" onclick="copyText()">Copiar</button>
             </section>
 
         </div>
     </main>
-    <footer></footer>
+    <footer class="rodape">
+        <h1 class="rodape__text">Desenvolvido por João Gabriel - Projeto ONE T6</h1>
+    </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

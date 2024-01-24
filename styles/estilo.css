@@ -6,37 +6,36 @@
 body {
   background-color: #f3f5fc;
   box-sizing: border-box;
-  padding: 0 2% 2% 0;
+  padding: 0 2%;
 }
 
 .head {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 40px 40px;
+  padding: 20px;
 }
 
 .head__icon {
-  width: 120px;
-  height: 48px;
+  width: 80px;
+  height: auto;
 }
 
 .program {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  margin: 0 0 0 15%;
+  padding-left: 10%;
 }
 
 .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding-right: 80px;
+  flex: 1;
+  padding-right: 5%;
 }
 
 .insert-text {
@@ -68,12 +67,11 @@ body {
 }
 
 .bottom-section {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .bottom-section__alert {
   display: flex;
-  flex-direction: row;
   margin: 10px 0;
 }
 
@@ -88,9 +86,8 @@ body {
 }
 
 .buttons {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
+  flex-direction: column; 
+  gap: 15px; 
 }
 
 .buttons__button1 {
@@ -113,18 +110,25 @@ body {
   padding: 24px;
 }
 
-.rectangle {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    height: 600px;
-    justify-content: center;
-    align-items: center;   
-    background-color: white;
-    border-radius: 32px;
-    margin-left: auto;
+.buttons__button1,
+.buttons__button2 {
+  width: 100%; 
+}
 
-    }
+.rectangle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; 
+  height: auto; 
+  background-color: white;
+  border-radius: 16px; 
+  margin-top: 20px;
+  padding: 20px;
+  position: relative;
+}
 
 .rectangle__img {
   width: auto;
@@ -132,10 +136,38 @@ body {
   padding-bottom: 5px;
 }
 
-.rectangle__h1{
-    text-align: center;
+.rectangle__h1,
+.rectangle__p {
+  align-items: center;
+  text-align: center;
 }
 
-.rectangle__p{
-    text-align: center;
+.buttons__button1,
+.buttons__button2,
+.rectangle__btn {
+  margin-bottom: 10px;
+}
+
+.rectangle__btn {
+  border: 1px solid darkblue;
+  position: absolute;
+  bottom: 1px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  background-color: transparent;
+  border-radius: 24px;
+  color: darkblue;
+}
+
+.rodape {
+
+  bottom: 0; /* Fixa o rodapé no final da tela */
+  width: 100%;
+  padding: 1%;
+  text-align: center;
+}
+
+.rodape__text {
+  font-size: 0.75rem;
 }
