@@ -66,7 +66,7 @@ function exibirResultado() {
     p.textContent = "Digite um texto que você deseja criptografar ou descriptografar";
     btn.setAttribute('hidden', true);
   } else {
-    image.src = "";
+    image.setAttribute('hidden',true);
     hiddenText.textContent = listaFrase.join("");
     p.textContent = "";
     h1.textContent = "";
