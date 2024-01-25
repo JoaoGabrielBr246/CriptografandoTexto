@@ -170,9 +170,9 @@ body {
   color: var(--third-color);
   font-size: 24px;
   width: 100%;
-  overflow-wrap: break-word; /* Adicionado para quebras de linha em palavras longas */
-  max-width: 100%; /* Adicionado para garantir que o texto não ultrapasse a largura do container */
-  box-sizing: border-box; /* Adicionado para incluir padding e border na largura do elemento */
+  overflow-wrap: break-word;
+  max-width: 100%; 
+  box-sizing: border-box; 
 }
 
 .program__rec__btn {
