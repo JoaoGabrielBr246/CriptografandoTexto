@@ -258,5 +258,6 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    padding: 5%;
   }
 }
