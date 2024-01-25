@@ -1,45 +1,45 @@
 function crip() {
-    let text = document.querySelector(".program__textArea").value;
-  
-    if (!/^[a-z\s.,!?]+$/i.test(text)) {
-      alert("Por favor, digite apenas letras minúsculas, espaços e pontuações (.,!?)");
-      return;
-    }
-  
-    text = text.replace(/e/g, "enter");
-    text = text.replace(/i/g, "imes");
-    text = text.replace(/a/g, "ai");
-    text = text.replace(/o/g, "ober");
-    text = text.replace(/u/g, "ufat");
+  let text = document.querySelector(".program__textArea").value;
 
-    listaFrase = text.split("").map((letra) => {
-      return letra;
-    });
-
-  
-    exibirResultado();
+  if (!/^[a-z\s.,!?]+$/i.test(text) || /[A-ZÀ-ÚÂ-ÛÄ-Ü]/.test(text)) {
+    alert("Por favor, digite apenas letras minúsculas, espaços e pontuações (.,!?)");
+    return;
   }
-  
-  function descrip() {
-    let text = document.querySelector(".program__textArea").value;
-  
-    if (!/^[a-z\s.,!?]+$/i.test(text)) {
-      alert("Por favor, digite apenas letras minúsculas, espaços e pontuações (.,!?)");
-      return;
-    }
-  
-    text = text.replace(/enter/g, "e");
-    text = text.replace(/imes/g, "i");
-    text = text.replace(/ai/g, "a");
-    text = text.replace(/ober/g, "o");
-    text = text.replace(/ufat/g, "u");
 
-    listaFrase = text.split("").map((letra) => {
-      return letra;
-    });
-  
-    exibirResultado();
+  text = text.replace(/e/g, "enter");
+  text = text.replace(/i/g, "imes");
+  text = text.replace(/a/g, "ai");
+  text = text.replace(/o/g, "ober");
+  text = text.replace(/u/g, "ufat");
+
+  listaFrase = text.split("").map((letra) => {
+    return letra;
+  });
+
+  exibirResultado();
+}
+
+function descrip() {
+  let text = document.querySelector(".program__textArea").value;
+
+  if (!/^[a-z\s.,!?]+$/i.test(text) || /[A-ZÀ-ÚÂ-ÛÄ-Ü]/.test(text)) {
+    alert("Por favor, digite apenas letras minúsculas, espaços e pontuações (.,!?)");
+    return;
   }
+
+  text = text.replace(/enter/g, "e");
+  text = text.replace(/imes/g, "i");
+  text = text.replace(/ai/g, "a");
+  text = text.replace(/ober/g, "o");
+  text = text.replace(/ufat/g, "u");
+
+  listaFrase = text.split("").map((letra) => {
+    return letra;
+  });
+
+  exibirResultado();
+}
+
   
   function exibirResultado() {
     let image = document.querySelector(".program__img");
